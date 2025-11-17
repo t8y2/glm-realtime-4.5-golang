@@ -102,12 +102,6 @@ go test -v ./samples -run TestRealtimeClientWithVLM
 
 此示例展示了新增的视频批量处理功能和动态 Instructions 设置功能：
 
-**主要特性：**
-
-- **批量视频帧处理**：收集多个视频帧后批量发送给 API，提升分析效率
-- **动态 Instructions 设置**：支持通过 `session.update` 事件或 API 动态设置 VLM 分析提示词
-- **智能 Fallback**：当未设置 instructions 时自动使用默认提示词
-
 **使用方法：**
 
 1. **通过 API 设置 Instructions**
@@ -128,11 +122,3 @@ sessionUpdateEvent := &events.Event{
 }
 err := realtimeClient.Send(sessionUpdateEvent)
 ```
-
-## 许可证
-
-本项目采用 [LICENSE.md](../LICENSE.md) 中规定的许可证。
-
-## 更新日志
-
-详见 [CHANGELOG.md](../CHANGELOG.md)。
